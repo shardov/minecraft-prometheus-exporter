@@ -32,7 +32,9 @@ public class PrometheusExporterConfig {
             metricConfig("tick_duration_average", true, TickDurationAverageCollector::new),
             metricConfig("tick_duration_min", false, TickDurationMinCollector::new),
             metricConfig("tick_duration_max", true, TickDurationMaxCollector::new),
-
+            metricConfig("Uptime", true, Uptime::new),
+            metricConfig("ThreadCount", true, ThreadCount::new),
+            metricConfig("CpuUsage", true, CpuUsage::new),
             metricConfig("player_online", false, PlayerOnline::new),
             metricConfig("player_statistic", false, PlayerStatistics::new));
 
